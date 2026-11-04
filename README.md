@@ -7,7 +7,7 @@ Organiza y da estilo a una receta de tortilla siguiendo las referencias. El arch
 1. Abre `index.html` con Live Server. Si no lo tienes instalado, busca **Live Server**, de Ritwick Dey, en las extensiones de VS Code e instálalo.
 2. Organiza la receta con un título principal, una introducción y los apartados de tiempo de preparación, ingredientes, instrucciones e información nutricional.
 3. Enlaza la imagen `assets/images/image-omelette.jpeg` con una descripción en el atributo `alt`.
-4. Usa una lista desordenada para ingredientes, una ordenada para los pasos y una tabla para los datos nutricionales. Destaca las palabras relevantes con `<strong>`.
+4. Usa una lista desordenada para ingredientes, una ordenada para los pasos y una tabla para los datos nutricionales. Utiliza `<b>` para destacar las etiquetas de los tiempos y el inicio de cada paso, sin atribuirles una importancia especial.
 5. Elige tus propias clases CSS y escribe las reglas necesarias para reproducir el diseño.
 6. Practica el ancho en porcentaje, `max-width` y los tamaños en `rem`. Ajusta los espacios observando las referencias.
 7. Reduce el ancho de la ventana y comprueba que se puede leer la receta sin desplazamiento horizontal.
@@ -98,7 +98,7 @@ El texto de la página hereda Outfit desde `body`. Los títulos utilizan Young S
 
 En la referencia, el título del tiempo de preparación utiliza **Outfit en negrita**. Aplica esa excepción con una clase cuyo nombre elijas tú.
 
-Cuando utilices `<strong>` o `font-weight: bold` en un texto con Outfit, el navegador seleccionará el archivo de grosor `700` que has registrado.
+Cuando utilices `<b>` o `font-weight: bold` en un texto con Outfit, el navegador seleccionará el archivo de grosor `700` que has registrado.
 
 ### 3. Comprueba el resultado
 
@@ -106,7 +106,7 @@ Guarda `index.html` y ábrelo con Live Server. Los títulos deben tener remates 
 
 ## Etiquetas que puedes utilizar
 
-`main`, `section`, `img`, `h1`, `h2`, `p`, `ul`, `ol`, `li`, `strong`, `table`, `tr`, `th` y `td`.
+`main`, `section`, `img`, `h1`, `h2`, `p`, `ul`, `ol`, `li`, `b`, `table`, `tr`, `th` y `td`.
 
 ## Ayuda sobre unidades relativas
 
