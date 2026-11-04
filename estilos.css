@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  background-color: #f3e6d8;
+  color: #5f574e;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.receta {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+
+.foto {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+h1 {
+  color: #302d2c;
+  font-family: Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: normal;
+}
+
+h2 {
+  color: #854632;
+  font-family: Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+.preparacion {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #fff5fa;
+  border-radius: 0.75rem;
+}
+
+.titulo-preparacion {
+  margin-top: 0;
+  color: #7b284f;
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin: 0.75rem 0;
+  padding-left: 0.5rem;
+}
+
+.apartado {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e4ded8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 50%;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e4ded8;
+  text-align: left;
+}
+
+th {
+  font-weight: normal;
+}
+
+td {
+  color: #854632;
+  font-weight: bold;
+}
+
+.sin-borde {
+  border-bottom: 0;
+}
