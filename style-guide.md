@@ -1,13 +1,15 @@
 # Guía de estilo de la receta
 
-La paleta hexadecimal y las referencias visuales están en el README.
+Los colores hexadecimales y las capturas de referencia están en el README.
 
-## Tipografías locales
+## Tipos de letra
 
-- Young Serif regular: `assets/fonts/young-serif/YoungSerif-Regular.ttf`.
-- Outfit regular: `assets/fonts/outfit/static/Outfit-Regular.ttf`.
-- Outfit negrita: `assets/fonts/outfit/static/Outfit-Bold.ttf`.
+- Texto general: `Arial, sans-serif`.
+- Título principal y títulos de apartado: `Georgia, serif`, con grosor normal.
+- Título del tiempo de preparación: `Arial, sans-serif`, en negrita.
 
-Puedes registrar las fuentes con `@font-face`, indicando un nombre con `font-family` y la ruta del archivo con `src: url(...)`. Después utiliza ese nombre en las reglas de los textos correspondientes.
+## CSS
 
-Elige los tamaños de letra y los espacios observando las capturas. Practica las unidades `rem` para tamaños y espacios, y `%` para los anchos.
+Escribe las reglas en `estilos.css`, ya enlazado desde `index.html`. La regla inicial de `box-sizing` se aplica a todos los elementos con el selector `*`.
+
+Practica las unidades `rem` para tamaños y espacios, y `%` para los anchos. Utiliza `max-width` para limitar el ancho de la receta y decide los espacios observando las capturas.

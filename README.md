@@ -1,6 +1,6 @@
 # Una página de receta
 
-Organiza y da estilo a una receta de tortilla siguiendo las referencias. El archivo `index.html` contiene todo el texto que necesitas, en inglés. Tú debes añadir las etiquetas HTML y escribir el CSS dentro de `<style>`.
+Organiza y da estilo a una receta de tortilla siguiendo las referencias. El archivo `index.html` contiene todo el texto que necesitas, en inglés. Tú debes añadir las etiquetas HTML y escribir el CSS en `estilos.css`, que ya está enlazado desde el HTML.
 
 ## Tu tarea
 
@@ -14,10 +14,10 @@ Organiza y da estilo a una receta de tortilla siguiendo las referencias. El arch
 
 ## Diseño esperado
 
-- [Ver diseño para una ventana amplia](design/desktop-design.jpg).
-- [Ver diseño para una pantalla pequeña](design/mobile-design.jpg).
+- [Ver diseño para una ventana amplia](disenoEsperado.png).
+- [Ver diseño para una pantalla pequeña](disenoEsperado-movil.png).
 
-![Diseño esperado de la receta](design/desktop-design.jpg)
+![Diseño esperado de la receta](disenoEsperado.png)
 
 El resultado es aproximado. Prioriza la estructura, la legibilidad y los espacios entre bloques.
 
@@ -34,75 +34,53 @@ El resultado es aproximado. Prioriza la estructura, la legibilidad y los espacio
 | Título del tiempo de preparación | `#7b284f` |
 | Fondo del tiempo de preparación | `#fff5fa` |
 
-## Fuentes incluidas
+## Archivo CSS y modelo de caja
 
-- **Young Serif:** para el título principal y los títulos de los apartados.
-- **Outfit:** para el texto general.
+El archivo `index.html` ya enlaza la hoja de estilos externa situada en esta misma carpeta:
 
-Los archivos están en `assets/fonts`. Sus licencias se conservan en los archivos `OFL.txt` correspondientes. Consulta [la guía de estilo](style-guide.md) para localizar los archivos.
+```html
+<link rel="stylesheet" href="estilos.css">
+```
 
-## Cómo incluir las fuentes
-
-Las fuentes ya están descargadas en la carpeta `assets/fonts`. Para utilizarlas, primero debes registrar sus archivos y después aplicarlas a los elementos de la página.
-
-### 1. Registra las fuentes con `@font-face`
-
-Copia estas reglas al principio de la etiqueta `<style>` de `index.html`, antes de tus otras reglas CSS:
+Escribe tus reglas en `estilos.css`. Al principio encontrarás esta regla preparada:
 
 ```css
-@font-face {
-  font-family: "Outfit";
-  src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Outfit";
-  src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: "Young Serif";
-  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
-  font-weight: 400;
+* {
+  box-sizing: border-box;
 }
 ```
 
-- `@font-face` permite registrar una fuente para usarla en la página.
-- `font-family` le da un nombre que utilizarás después en tu CSS.
-- `src: url(...)` indica dónde está el archivo. Estas rutas son relativas a `index.html`, porque estamos escribiendo el CSS dentro de su etiqueta `<style>`.
-- `font-weight` identifica el grosor del archivo: `400` es normal y `700` es negrita. Los dos archivos de Outfit comparten el mismo nombre de familia.
+El selector `*` aplica la regla a todos los elementos. Con `border-box`, el ancho declarado incluye el contenido, el padding y el borde. El margen sigue quedando fuera. Esto ayuda a que las cajas con ancho en porcentaje se ajusten a su contenedor.
 
-### 2. Aplica las fuentes con `font-family`
+## Tipos de letra
 
-Añade estas propiedades a las reglas de tu página:
+Utiliza fuentes del sistema:
+
+- **Arial:** para el texto general.
+- **Georgia:** para el título principal y los títulos de los apartados.
+- El título del tiempo de preparación utiliza **Arial en negrita**.
+
+Puedes aplicar las fuentes así en `estilos.css`:
 
 ```css
 body {
-  font-family: "Outfit", Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
-  font-family: "Young Serif", Georgia, serif;
+  font-family: Georgia, serif;
   font-weight: normal;
 }
 
 h2 {
-  font-family: "Young Serif", Georgia, serif;
+  font-family: Georgia, serif;
   font-weight: normal;
 }
 ```
 
-El texto de la página hereda Outfit desde `body`. Los títulos utilizan Young Serif porque sus reglas indican otra fuente. Las fuentes que aparecen después de la primera coma son alternativas por si la principal no se puede cargar.
+El texto hereda Arial desde `body`. Los títulos utilizan Georgia porque sus reglas indican otra fuente. `sans-serif` y `serif` son familias genéricas de reserva: el navegador elegirá una alternativa si la primera fuente no está disponible.
 
-En la referencia, el título del tiempo de preparación utiliza **Outfit en negrita**. Aplica esa excepción con una clase cuyo nombre elijas tú.
-
-Cuando utilices `<b>` o `font-weight: bold` en un texto con Outfit, el navegador seleccionará el archivo de grosor `700` que has registrado.
-
-### 3. Comprueba el resultado
-
-Guarda `index.html` y ábrelo con Live Server. Los títulos deben tener remates en las letras (Young Serif), mientras que el texto general utiliza Outfit. Si no cambian, revisa las rutas, los nombres de las familias y que los archivos sigan en sus carpetas originales.
+Para el título del tiempo de preparación, aplica Arial y negrita con una clase cuyo nombre elijas tú.
 
 ## Etiquetas que puedes utilizar
 
@@ -113,7 +91,7 @@ Guarda `index.html` y ábrelo con Live Server. Los títulos deben tener remates 
 - Un ancho en `%` depende del ancho del contenedor.
 - `max-width` pone un límite al crecimiento de la caja.
 - `rem` toma como referencia el tamaño de letra del elemento raíz. Si ese tamaño es de 16 px, `1rem` equivale a 16 px.
-- Para que el padding forme parte del ancho declarado, puedes utilizar `box-sizing: border-box`.
+- La regla `box-sizing: border-box` ya está preparada para que el padding y el borde formen parte del ancho declarado.
 
 ## Comprueba tu trabajo
 
