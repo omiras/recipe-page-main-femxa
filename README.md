@@ -1,6 +1,6 @@
 # Una página de receta
 
-Organiza y da estilo a una receta de tortilla siguiendo las referencias. El archivo `index.html` contiene todo el texto que necesitas, en inglés. Tú debes añadir las etiquetas HTML y escribir el CSS en `estilos.css`, que ya está enlazado desde el HTML.
+Organiza y da estilo a una receta de tortilla siguiendo las referencias. El archivo `index.html` contiene todo el texto que necesitas, en inglés. Tú debes añadir las etiquetas HTML y escribir el CSS en `styles.css`, que ya está enlazado desde el HTML.
 
 ## Tu tarea
 
@@ -39,10 +39,10 @@ El resultado es aproximado. Prioriza la estructura, la legibilidad y los espacio
 El archivo `index.html` ya enlaza la hoja de estilos externa situada en esta misma carpeta:
 
 ```html
-<link rel="stylesheet" href="estilos.css">
+<link rel="stylesheet" href="styles.css">
 ```
 
-Escribe tus reglas en `estilos.css`. Al principio encontrarás esta regla preparada:
+Escribe tus reglas en `styles.css`. Al principio encontrarás esta regla preparada:
 
 ```css
 * {
@@ -60,7 +60,7 @@ Utiliza fuentes del sistema:
 - **Georgia:** para el título principal y los títulos de los apartados.
 - El título del tiempo de preparación utiliza **Arial en negrita**.
 
-Puedes aplicar las fuentes así en `estilos.css`:
+Puedes aplicar las fuentes así en `styles.css`:
 
 ```css
 body {
@@ -100,3 +100,68 @@ Para el título del tiempo de preparación, aplica Arial y negrita con una clase
 - Los datos nutricionales aparecen en una tabla, con encabezados de fila.
 - Las medidas relativas permiten adaptar el contenido al ancho disponible.
 - Conservas el texto completo de la receta y utilizas colores hexadecimales.
+
+## BONUS: personaliza la receta con las fuentes incluidas
+
+¿Ya tienes la receta terminada? Dale otro aspecto utilizando las fuentes de `assets/fonts`: **Outfit** para el texto y **Young Serif** para los títulos.
+
+### Diseños del BONUS
+
+Estas referencias muestran la versión con las fuentes de los assets:
+
+- [Ver diseño del BONUS para escritorio](bonus/desktop-design.jpg).
+- [Ver diseño del BONUS para móvil](bonus/mobile-design.jpg).
+
+![Diseño del BONUS con Outfit y Young Serif](bonus/desktop-design.jpg)
+
+### 1. Registra las fuentes
+
+Añade estas reglas al principio de `styles.css`:
+
+```css
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-weight: 400;
+}
+```
+
+`@font-face` registra una fuente. `font-family` le da un nombre, `src` indica la ruta del archivo y `font-weight` identifica su grosor: `400` es normal y `700` es negrita. Las rutas se calculan desde `styles.css`, que está en la raíz del ejercicio.
+
+### 2. Aplica las nuevas fuentes
+
+Modifica las propiedades de tus reglas existentes:
+
+```css
+body {
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: normal;
+}
+```
+
+Aplica también **Outfit en negrita** al título del tiempo de preparación, mediante la clase que hayas elegido para ese elemento. Las etiquetas `<b>` usarán la variante negrita de Outfit registrada con grosor `700`.
+
+Guarda y compara con los diseños de `bonus`. Observa cómo cambia la personalidad de la página al cambiar únicamente la tipografía. Puedes ajustar los espacios si las nuevas letras ocupan más o menos que las anteriores.
+
+Las licencias de las fuentes se conservan en los archivos `OFL.txt` de sus carpetas.
