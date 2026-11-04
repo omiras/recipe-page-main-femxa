@@ -41,6 +41,69 @@ El resultado es aproximado. Prioriza la estructura, la legibilidad y los espacio
 
 Los archivos están en `assets/fonts`. Sus licencias se conservan en los archivos `OFL.txt` correspondientes. Consulta [la guía de estilo](style-guide.md) para localizar los archivos.
 
+## Cómo incluir las fuentes
+
+Las fuentes ya están descargadas en la carpeta `assets/fonts`. Para utilizarlas, primero debes registrar sus archivos y después aplicarlas a los elementos de la página.
+
+### 1. Registra las fuentes con `@font-face`
+
+Copia estas reglas al principio de la etiqueta `<style>` de `index.html`, antes de tus otras reglas CSS:
+
+```css
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  font-weight: 400;
+}
+```
+
+- `@font-face` permite registrar una fuente para usarla en la página.
+- `font-family` le da un nombre que utilizarás después en tu CSS.
+- `src: url(...)` indica dónde está el archivo. Estas rutas son relativas a `index.html`, porque estamos escribiendo el CSS dentro de su etiqueta `<style>`.
+- `font-weight` identifica el grosor del archivo: `400` es normal y `700` es negrita. Los dos archivos de Outfit comparten el mismo nombre de familia.
+
+### 2. Aplica las fuentes con `font-family`
+
+Añade estas propiedades a las reglas de tu página:
+
+```css
+body {
+  font-family: "Outfit", Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: normal;
+}
+
+h2 {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: normal;
+}
+```
+
+El texto de la página hereda Outfit desde `body`. Los títulos utilizan Young Serif porque sus reglas indican otra fuente. Las fuentes que aparecen después de la primera coma son alternativas por si la principal no se puede cargar.
+
+En la referencia, el título del tiempo de preparación utiliza **Outfit en negrita**. Aplica esa excepción con una clase cuyo nombre elijas tú.
+
+Cuando utilices `<strong>` o `font-weight: bold` en un texto con Outfit, el navegador seleccionará el archivo de grosor `700` que has registrado.
+
+### 3. Comprueba el resultado
+
+Guarda `index.html` y ábrelo con Live Server. Los títulos deben tener remates en las letras (Young Serif), mientras que el texto general utiliza Outfit. Si no cambian, revisa las rutas, los nombres de las familias y que los archivos sigan en sus carpetas originales.
+
 ## Etiquetas que puedes utilizar
 
 `main`, `section`, `img`, `h1`, `h2`, `p`, `ul`, `ol`, `li`, `strong`, `table`, `tr`, `th` y `td`.
