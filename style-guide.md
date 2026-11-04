@@ -10,6 +10,6 @@ Los colores hexadecimales y las capturas de referencia están en el README.
 
 ## CSS
 
-Escribe las reglas en `estilos.css`, ya enlazado desde `index.html`. La regla inicial de `box-sizing` se aplica a todos los elementos con el selector `*`.
+Escribe las reglas en `styles.css`, ya enlazado desde `index.html`. La regla inicial de `box-sizing` se aplica a todos los elementos con el selector `*`.
 
 Practica las unidades `rem` para tamaños y espacios, y `%` para los anchos. Utiliza `max-width` para limitar el ancho de la receta y decide los espacios observando las capturas.
