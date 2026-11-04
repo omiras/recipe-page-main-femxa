@@ -5,61 +5,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Receta de tortilla</title>
   <style>
-    /* Escribe aquí tus reglas CSS. */
+    @font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit/static/Outfit-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url("assets/fonts/young-serif/YoungSerif-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  background-color: #f3e6d8;
+  color: #5f574e;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.receta {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+}
+
+.foto {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+h1 {
+  color: #302d2c;
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: normal;
+}
+
+h2 {
+  color: #854632;
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+
+.preparacion {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: #fff5fa;
+  border-radius: 0.75rem;
+}
+
+.titulo-preparacion {
+  margin-top: 0;
+  color: #7b284f;
+  font-family: "Outfit", Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin: 0.75rem 0;
+  padding-left: 0.5rem;
+}
+
+.apartado {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e4ded8;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 50%;
+  padding: 0.75rem;
+  border-bottom: 1px solid #e4ded8;
+  text-align: left;
+}
+
+th {
+  font-weight: normal;
+}
+
+td {
+  color: #854632;
+  font-weight: bold;
+}
+
+.sin-borde {
+  border-bottom: 0;
+}
   </style>
 </head>
 <body>
-Simple Omelette Recipe
+  <main class="receta">
+    <img class="foto" src="assets/images/image-omelette.jpeg" alt="Omelette served on a plate with vegetables and herbs">
+    <h1>Simple Omelette Recipe</h1>
+    <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
 
-  An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
-  to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+    <section class="preparacion">
+      <h2 class="titulo-preparacion">Preparation time</h2>
+      <ul>
+        <li><strong>Total:</strong> Approximately 10 minutes</li>
+        <li><strong>Preparation:</strong> 5 minutes</li>
+        <li><strong>Cooking:</strong> 5 minutes</li>
+      </ul>
+    </section>
 
-  Preparation time
+    <section class="apartado">
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+    </section>
 
-  Total: Approximately 10 minutes
-  Preparation: 5 minutes
-  Cooking: 5 minutes
+    <section class="apartado">
+      <h2>Instructions</h2>
+      <ol>
+        <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+        <li><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+        <li><strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
+      </ol>
+    </section>
 
-  Ingredients
-
-  2-3 large eggs
-  Salt, to taste
-  Pepper, to taste
-  1 tablespoon of butter or oil
-  Optional fillings: cheese, diced vegetables, cooked meats, herbs
-
-  Instructions
-
-  Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
-  You can add a tablespoon of water or milk for a fluffier texture.
-
-  Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
-
-  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
-  the eggs evenly coat the surface.
-
-  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
-  middle, sprinkle your chosen fillings over one half of the omelette.
-
-  Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
-  fillings. Let it cook for another minute, then slide it onto a plate.
-
-  Enjoy: Serve hot, with additional salt and pepper if needed.
-
-  Nutrition
-
-  The table below shows nutritional values per serving without the additional fillings.
-
-  Calories
-  277kcal
-
-  Carbs
-  0g
-
-  Protein
-  20g
-
-  Fat
-  22g
+    <section>
+      <h2>Nutrition</h2>
+      <p>The table below shows nutritional values per serving without the additional fillings.</p>
+      <table aria-label="Nutritional values per serving">
+        <tr><th scope="row">Calories</th><td>277kcal</td></tr>
+        <tr><th scope="row">Carbs</th><td>0g</td></tr>
+        <tr><th scope="row">Protein</th><td>20g</td></tr>
+        <tr><th class="sin-borde" scope="row">Fat</th><td class="sin-borde">22g</td></tr>
+      </table>
+    </section>
+  </main>
 </body>
 </html>
