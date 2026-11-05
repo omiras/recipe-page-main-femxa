@@ -86,10 +86,6 @@ El texto hereda Arial desde `body`. Los títulos utilizan Georgia porque sus reg
 
 Para el título del tiempo de preparación, aplica Arial y negrita con una clase cuyo nombre elijas tú.
 
-## Etiquetas que puedes utilizar
-
-`main`, `section`, `img`, `h1`, `h2`, `p`, `ul`, `ol`, `li`, `table`, `tr`, `th` y `td`.
-
 ## Ayuda sobre unidades relativas
 
 - Un ancho en `%` depende del ancho del contenedor.
