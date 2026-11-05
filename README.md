@@ -7,17 +7,24 @@ Organiza y da estilo a una receta de tortilla siguiendo las referencias. El arch
 1. Abre `index.html` con Live Server. Si no lo tienes instalado, busca **Live Server**, de Ritwick Dey, en las extensiones de VS Code e instálalo.
 2. Organiza la receta con un título principal, una introducción y los apartados de tiempo de preparación, ingredientes, instrucciones e información nutricional.
 3. Enlaza la imagen `assets/images/image-omelette.jpeg` con una descripción en el atributo `alt`.
-4. Usa una lista desordenada para ingredientes, una ordenada para los pasos y una tabla para los datos nutricionales. Utiliza `<b>` para destacar las etiquetas de los tiempos y el inicio de cada paso, sin atribuirles una importancia especial.
+4. Usa una lista desordenada para ingredientes, una ordenada para los pasos y una tabla para los datos nutricionales.
 5. Elige tus propias clases CSS y escribe las reglas necesarias para reproducir el diseño.
 6. Practica el ancho en porcentaje, `max-width` y los tamaños en `rem`. Ajusta los espacios observando las referencias.
 7. Reduce el ancho de la ventana y comprueba que se puede leer la receta sin desplazamiento horizontal.
 
 ## Diseño esperado
 
-- [Ver diseño para una ventana amplia](disenoEsperado.png).
-- [Ver diseño para una pantalla pequeña](disenoEsperado-movil.png).
+### Diseño móvil
 
-![Diseño esperado de la receta](disenoEsperado.png)
+![Diseño esperado para móvil](disenoEsperado-movil.png)
+
+### Diseño ampliado
+
+![Diseño esperado para una ventana amplia](disenoEsperado.png)
+
+### Vídeo: de móvil a escritorio
+
+[Ver el vídeo del cambio de móvil a escritorio](https://oscarm.tinytake.com/df/189fbaf/thumbnail?type=attachments&version_no=0&file_version_no=0&thumbnail_size=preview)
 
 El resultado es aproximado. Prioriza la estructura, la legibilidad y los espacios entre bloques.
 
@@ -84,7 +91,7 @@ Para el título del tiempo de preparación, aplica Arial y negrita con una clase
 
 ## Etiquetas que puedes utilizar
 
-`main`, `section`, `img`, `h1`, `h2`, `p`, `ul`, `ol`, `li`, `b`, `table`, `tr`, `th` y `td`.
+`main`, `section`, `img`, `h1`, `h2`, `p`, `ul`, `ol`, `li`, `table`, `tr`, `th` y `td`.
 
 ## Ayuda sobre unidades relativas
 
@@ -109,10 +116,12 @@ Para el título del tiempo de preparación, aplica Arial y negrita con una clase
 
 Estas referencias muestran la versión con las fuentes de los assets:
 
-- [Ver diseño del BONUS para escritorio](bonus/desktop-design.jpg).
 - [Ver diseño del BONUS para móvil](bonus/mobile-design.jpg).
+- [Ver diseño del BONUS para escritorio](bonus/desktop-design.jpg).
 
-![Diseño del BONUS con Outfit y Young Serif](bonus/desktop-design.jpg)
+![Diseño móvil del BONUS con Outfit y Young Serif](bonus/mobile-design.jpg)
+
+![Diseño ampliado del BONUS con Outfit y Young Serif](bonus/desktop-design.jpg)
 
 ### 1. Registra las fuentes
 
@@ -160,7 +169,7 @@ h2 {
 }
 ```
 
-Aplica también **Outfit en negrita** al título del tiempo de preparación, mediante la clase que hayas elegido para ese elemento. Las etiquetas `<b>` usarán la variante negrita de Outfit registrada con grosor `700`.
+Aplica también **Outfit en negrita** al título del tiempo de preparación, mediante la clase que hayas elegido para ese elemento.
 
 Guarda y compara con los diseños de `bonus`. Observa cómo cambia la personalidad de la página al cambiar únicamente la tipografía. Puedes ajustar los espacios si las nuevas letras ocupan más o menos que las anteriores.
 
