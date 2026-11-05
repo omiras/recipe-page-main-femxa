@@ -2,4 +2,58 @@
   box-sizing: border-box;
 }
 
+
 /* Escribe aquí tus reglas CSS. */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3e6d8;
+  color: #5f574e;
+}
+
+/* Selector combinado. Permite aplicar los mismos estilos a h1 y a h2. A los dos selectores que pongas a cada lado de la coma */
+h1, h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+/* Podemos definir las propiedes CSS para un selector en diferentes partes de nuestro código */
+h1 {
+  color: #302d2c;
+  font-size: 2.25rem;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.preparacion {
+  background-color: #fff5fa;
+  padding: 1.25rem;
+  border-radius: 16px;
+}
+
+.titulo-preparacion {
+  color: #7b284f;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  font-size: 1.25rem;
+}
+
+
+.foto {
+  width: 100%; /* Ocupa tanto como su contenedor padre  */
+  border-radius: 16px;
+}
+
+.receta {
+  background-color: white;
+  padding: 1.5rem; /* 1rem son 16px en estos momentos, porque el usuario tiene el tamaño de la letra del navegador a 16 px*/
+  border-radius: 16px;
+}
+
+.concepto {
+  font-weight: bold;
+}
+
+
+
