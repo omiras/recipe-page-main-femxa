@@ -2,7 +2,6 @@
   box-sizing: border-box;
 }
 
-
 /* Escribe aquí tus reglas CSS. */
 body {
   font-family: Arial, sans-serif;
@@ -20,6 +19,11 @@ h1, h2 {
 h1 {
   color: #302d2c;
   font-size: 2.25rem;
+}
+
+h2 {
+  color: #854632;
+  font-size: 1.75rem;
 }
 
 li {
@@ -49,6 +53,8 @@ li {
   background-color: white;
   padding: 1.5rem; /* 1rem son 16px en estos momentos, porque el usuario tiene el tamaño de la letra del navegador a 16 px*/
   border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .concepto {
